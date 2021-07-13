@@ -9,10 +9,7 @@ void main() {
 class MyApp extends StatelessWidget {
   List<Location> locations = [
     new Location(
-        city: "Tinh Tay Ninh",
-        country: "VN",
-        lat: "11.33333",
-        lon: "106.166672")
+        city: "Tỉnh Tây Ninh", country: "VN", lat: "11.3333", lon: "106.1667")
   ];
 
   @override

@@ -12,8 +12,7 @@ class CityDropDown extends StatefulWidget {
   const CityDropDown(this.locations);
 
   @override
-  _CityDropDownState createState() =>
-      _CityDropDownState(this.locations);
+  _CityDropDownState createState() => _CityDropDownState(this.locations);
 }
 
 class _CityDropDownState extends State<CityDropDown> {
@@ -27,14 +26,11 @@ class _CityDropDownState extends State<CityDropDown> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.grey[100],
-        body: createAppBar(this.locations, this.location, context)
-            
-        );
+        body: createAppBar(this.locations, this.location, context));
   }
 
-
-Widget createAppBar(
-    List<Location> locations, Location location, BuildContext context) {
+  Widget createAppBar(
+      List<Location> locations, Location location, BuildContext context) {
     return GestureDetector(
       onTap: () {
         showModalBottomSheet<void>(
@@ -46,7 +42,7 @@ Widget createAppBar(
                 Icons.keyboard_arrow_down_rounded,
                 color: Colors.black,
                 size: 24.0,
-                semanticLabel: 'Tap to change location',
+                semanticLabel: 'Chạm để thay đổi vùng',
               ),
               Expanded(
                   child: ListView.builder(
@@ -55,9 +51,7 @@ Widget createAppBar(
                       itemBuilder: (BuildContext context, int index) {
                         return GestureDetector(
                             onTap: () {
-                              setState(() {
-                                
-                              });
+                              setState(() {});
                               Navigator.pop(context);
                             },
                             child: Column(
@@ -117,8 +111,8 @@ Widget createAppBar(
                   children: <TextSpan>[
                     TextSpan(
                         text: '${location.city.capitalizeFirstOfEach}, ',
-                        style:
-                            TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 16)),
                     TextSpan(
                         text: '${location.country.capitalizeFirstOfEach}',
                         style: TextStyle(
@@ -130,7 +124,7 @@ Widget createAppBar(
                 Icons.keyboard_arrow_down_rounded,
                 color: Colors.black,
                 size: 24.0,
-                semanticLabel: 'Tap to change location',
+                semanticLabel: 'Chạm để thay đổi vùng',
               ),
             ],
           )),
